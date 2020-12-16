@@ -1,21 +1,27 @@
 .header
-  padding-top: 36px
+  padding-top: 24px
   &-wrapper
     margin: auto
     display: flex
     align-items: center
     justify-content: space-between
     max-width: 1140px
+    margin-bottom: 57px
   &__button
     font-size: 16px
     font-weight: 700
     line-height: 22px
     border-radius: 8px
     border: 2px solid $additional
-    padding: 10px 26px 12px 26px
+    padding: 10px 22px 12px 22px
     background-color: transparent
     color: $additional
     cursor: pointer
+    font-family: Open Sans
+    &:hover
+      background-color: $additional
+      color: white
+      transition: 0.2s linear
   .nav
     margin-left: auto
     margin-right: 31px
@@ -24,7 +30,6 @@
       align-items: center
       justify-content: space-between
       list-style-type: none
-
       &__items
         padding: 0px 20px
         font-family: 'Open Sans', sans-serif
@@ -32,10 +37,99 @@
         font-weight: 600
         font-size: 16px
         line-height: 22px
+        &::after
+          content: ""
+          display: block
+          background-color: black
+          height: 2px
+          width: 0%
+          transition: width .3s linear
+          margin-top: 2px
+        &:hover::after
+          color: black
+          transition: 0.3s
+          cursor: pointer
+          width: 100%
       &__link
         text-decoration: none
         color: inherit
+        color: $color-text
 .menu-button
   display: none
   border: none
   background-color: #ffffff
+.main-section
+  background-image: url(../img/main-section-bg.jpg)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  border-radius: 8px
+  overflow: hidden
+  .main-wrapper
+    padding-top: 67px
+    padding-left: 108px
+    padding-bottom: 44px
+    .main-tag
+      color: #36B37E
+      padding: 6px 16px 6px 16px
+      background: rgba(54, 179, 126, 0.1)
+      border-radius: 20px
+      text-transform: uppercase
+      font-family: 'Open Sans', sans-serif
+      font-weight: 600
+      font-size: 14px
+      line-height: 20px
+    .main-title
+      font-family: 'HK Grotesk'
+      font-size: 56px
+      line-height: 68px
+      color: $color-text
+      margin-bottom: 36px
+      margin-top: 27px
+      letter-spacing: 0.9px
+      width: 425px
+    .main-subtitle
+      font-family: Open Sans
+      font-size: 20px
+      line-height: 36px
+      color: $description-text
+      margin-bottom: 52px
+      max-width: 652px
+    .main-button
+      background-color: $color-text
+      color: white
+      border-radius: 8px
+      border: 1px solid $color-text
+      padding: 14px 41px 14px 41px
+      font-size: 18px
+      line-height: 25px
+      font-weight: 700
+      margin-bottom: 44px
+      font-family: Open Sans
+      cursor: pointer
+      &:hover
+        background-color: lighten($color-text, 10%)
+        transition: 0.2s linear
+    .main-icon-block
+      width: 38px
+      height: 38px
+      margin-right: 5px
+    .main-advantages
+      display: flex
+      align-items: center
+      .advantages-item
+        display: flex
+        align-items: center
+      .main-icon
+        border: 1px solid #becfe5
+        border-radius: 12px
+        padding: 8px
+      .main-text
+        color: $color-text
+        margin-right: 31px
+        font-family: 'HK Grotesk'
+        font-weight: 500
+        font-style: normal
+        font-size: 16px
+        line-height: 19px
+        letter-spacing: 0.3px

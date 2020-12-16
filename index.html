@@ -3,10 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
-    <title>ehya</title>
+    <link rel="stylesheet" href="css/fonts.css" />
+    <title>Ehya - main page</title>
   </head>
   <body>
     <header class="header">
@@ -23,22 +27,229 @@
               <li class="menu__items">
                 <a href="#" class="menu__link">Новинки</a>
               </li>
-              <li class="menu__items"><a href="#" class="menu__link">
+              <li class="menu__items">
                 <a href="#" class="menu__link">Тренды</a>
               </li>
-              <li class="menu__items"><a href="#" class="menu__link">
+              <li class="menu__items">
                 <a href="#" class="menu__link">Отзывы</a>
               </li>
-              <li class="menu__items"><a href="#" class="menu__link">
+              <li class="menu__items">
                 <a href="#" class="menu__link">Контакты</a>
               </li>
             </ul>
           </nav>
           <button class="button header__button">Войти</button>
-          <button class="menu-button"><img src="img/icon-menu.svg" alt="menu button" ></button>
+          <button class="menu-button">
+            <img src="img/icon-menu.svg" alt="menu button" />
+          </button>
+        </div>
+        <div class="main-section">
+          <div class="main-wrapper">
+            <span class="main-tag"># ready to be cool</span>
+            <h1 class="main-title" lang="en">
+              Каждый может быть крутым и модным
+            </h1>
+            <p class="main-subtitle">
+              Чтобы быть в тренде и стать модным, вам нужно носить отличную
+              одежду и обновлять свой стиль. Всё это вы можете найти здесь.
+              Начните сейчас.
+            </p>
+            <button class="main-button">Подобрать одежду</button>
+            <div class="main-advantages">
+              <div class="advantages-item">
+                <div class="main-icon-block">
+                  <img
+                    src="img/payment.svg"
+                    alt="icon: Оплата"
+                    class="main-icon"
+                  />
+                </div>
+                <span class="main-text" lang="en">Онлайн оплата</span>
+              </div>
+              <div class="advantages-item">
+                <div class="main-icon-block">
+                  <img
+                    src="img/icon-guard.svg"
+                    alt="icon: Щит"
+                    class="main-icon"
+                  />
+                </div>
+                <span class="main-text" lang="en">Гарантия</span>
+              </div>
+              <div class="advantages-item">
+                <div class="main-icon-block">
+                  <img
+                    src="img/icon-like.svg"
+                    alt="icon: Лайк"
+                    class="main-icon"
+                  />
+                </div>
+
+                <span class="main-text" lang="en">Качество</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
+    <section class="collection">
+      <div class="container">
+        <div class="collection-wrapper">
+          <div class="collection-block-plant">
+            <img
+              src="img/newcollection-plant-woman.jpg"
+              alt="Новая коллекция: Изображение 1"
+              class="collection-img"
+            />
+          </div>
+          <div class="collection-wrapper-img">
+            <div class="collection-block">
+              <img
+                src="img/newcollection-2.jpg"
+                alt="Новая коллекция: Изображение 2"
+                class="collection-img"
+              />
+            </div>
+            <div class="collection-block">
+              <img
+                src="img/newcollection-3.jpg"
+                alt="Новая коллекция: Изображение 3"
+                class="collection-img"
+              />
+            </div>
+          </div>
+          <div class="collection-block-text">
+            <h2 class="collection-title" lang="en">Новая зимняя коллекция</h2>
+            <p class="collection-description">
+              Сейчас зимний сезон. Вы&#160;можете увидеть больше из этой
+              коллекции, нажав кнопку ниже. Успейте купить, пока коллекция есть
+              в наличии. Используйте код EHYA20, чтобы получить 20% скидку.
+            </p>
+            <button class="collection-button">
+              <span class="collection-look">Посмотреть коллекцию</span>
+              <img src="img/Icon-arrow.svg" alt="Иконка далее" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="trends">
+      <div class="container">
+        <div class="trends-wrapper">
+          <div class="trends-header">
+            <h2 class="trends-title" lang="en">Тренды</h2>
+            <div class="filters">
+              <a href="#" class="catigories-link">
+                <span class="catigories tabs-item">Новинки</span>
+              </a>
+              <a href="#" class="catigories-link">
+                <span class="catigories tabs-item">Лучшее</span>
+              </a>
+              <a href="#" class="catigories-link catigories-link__margin">
+                <span class="catigories tabs-item">Скоро</span>
+              </a>
+            </div>
+          </div>
+          <div class="trends-goods">
+            <div class="trends-card content-item">
+              <img src="img/trends-1.jpg" alt="1 Стиль" class="trends-img" />
+              <h3 class="card-title" lang="en">Minimalist Style</h3>
+              <div class="card-value">
+                <span class="card-price">$25.7</span>
+                <img
+                  src="img/icon-shopping-cart.svg"
+                  alt="Иконка добавить в корзину"
+                  class="icon-cart"
+                />
+              </div>
+            </div>
+            <div class="trends-card content-item">
+              <img src="img/trends-3.jpg" alt="2 Стиль" class="trends-img" />
+              <h3 class="card-title" lang="en">Luxury Gown</h3>
+              <div class="card-value">
+                <span class="card-price">$30.6</span>
+                <img
+                  src="img/icon-shopping-cart.svg"
+                  alt="Иконка добавить в корзину"
+                  class="icon-cart"
+                />
+              </div>
+            </div>
+            <div class="trends-card content-item">
+              <img src="img/trends-5.jpg" alt="3 Стиль" class="trends-img" />
+              <h3 class="card-title" lang="en">Full Coloristy</h3>
+              <div class="card-value">
+                <span class="card-price">$25.7</span>
+                <img
+                  src="img/icon-shopping-cart.svg"
+                  alt="Иконка добавить в корзину"
+                  class="icon-cart"
+                />
+              </div>
+            </div>
+            <div class="trends-card content-item">
+              <img src="img/trends-7.jpg" alt="4 Стиль" class="trends-img" />
+              <h3 class="card-title" lang="en">Pinky Winky</h3>
+              <div class="card-value">
+                <span class="card-price">$109</span>
+                <img
+                  src="img/icon-shopping-cart.svg"
+                  alt="Иконка добавить в корзину"
+                  class="icon-cart"
+                />
+              </div>
+            </div>
+            <div class="trends-card content-item">
+              <img src="img/trends-2.jpg" alt="5 Стиль" class="trends-img" />
+              <h3 class="card-title" lang="en">Holiday Vibes</h3>
+              <div class="card-value">
+                <span class="card-price">$51.2</span>
+                <img
+                  src="img/icon-shopping-cart.svg"
+                  alt="Иконка добавить в корзину"
+                  class="icon-cart"
+                />
+              </div>
+            </div>
+            <div class="trends-card content-item">
+              <img src="img/trends-4.jpg" alt="6 Стиль" class="trends-img" />
+              <h3 class="card-title" lang="en">Swaggie Shaggy</h3>
+              <div class="card-value">
+                <span class="card-price">$81.3</span>
+                <img
+                  src="img/icon-shopping-cart.svg"
+                  alt="Иконка добавить в корзину"
+                  class="icon-cart"
+                />
+              </div>
+            </div>
+            <div class="trends-card content-item">
+              <img src="img/trends-6.jpg" alt="7 Стиль" class="trends-img" />
+              <h3 class="card-title" lang="en">Red Formal</h3>
+              <div class="card-value">
+                <span class="card-price">$66.8</span>
+                <img
+                  src="img/icon-shopping-cart.svg"
+                  alt="Иконка добавить в корзину"
+                  class="icon-cart"
+                />
+              </div>
+            </div>
+            <div class="trends-card-more content-item">
+              <img
+                src="img/plus.svg"
+                alt="Иконка смотреть больше"
+                class="see-more-img"
+              />
+              <span class="see-more" lang="en"
+                >Смотреть<br />
+                больше коллекций</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="js/main.js"></script>
   </body>
 </html>

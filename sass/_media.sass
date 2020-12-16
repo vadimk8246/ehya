@@ -1,30 +1,266 @@
+@media ( max-width: 1400px)
+  .container
+    max-width: 1180px
 @media ( max-width: 1200px)
   .container
     max-width: 960px
+  .collection
+    &-wrapper
+      padding: 0px 0px
+      .collection-block-plant
+        margin-right: 20px
+      .collection-wrapper-img
+        margin-right: 20px
+      .collection-block-text
+        padding: 0px
+        margin-top: 10px
+        .collection-title
+          width: 280px
+          font-size: 42px
+        .collection-description
+          width: 270px
+          font-size: 18px
 @media ( max-width: 991px)
   .container
     max-width: 728px
   .header
+    .menu
+      &__items
+        &::after
+          height: 0px
+          width: 0%
+          margin-top: 0px
+          &:hover::after
+            color: black
+            width: 0%
+      &__button
+        &:hover
+          background-color: transparent
+          color: $additional
+    &-wrapper
+      margin-bottom: 44px
     &__logo
       margin-left: 41px
-    .menu-button
-      display: block
-      margin-right: 33px
-    .nav,.header__button
-      display: none
-
+  .main-section
+    .main-wrapper
+      .main-button
+        &:hover
+          background-color: $color-text
+  .collection-wrapper
+    .collection-button
+      &:hover
+        color: $additional
+  .menu-button
+    display: block
+    margin-right: 33px
+  .nav,.header__button
+    display: none
+  .main-section
+    background-position: -357px -19px
+    background-size: auto
+    .main-wrapper
+      padding-left: 28px
+      padding-top: 43px
+      padding-bottom: 36px
+      width: 100%
+      .main-title
+        font-size: 48px
+        line-height: 60px
+        margin-top: 25px
+        margin-bottom: 25px
+        width: 365px
+      .main-subtitle
+        font-size: 18px
+        max-width: 400px
+        line-height: 32px
+        margin-bottom: 37px
+      .main-button
+        margin-bottom: 39px
+      .main-advantages
+        .main-text
+          margin-right: 21px
+          margin-top: -4px
+  .collection
+    padding-top: 79px
+    &-wrapper
+      flex-wrap: wrap
+      padding-left: 28px
+      padding-right: 28px
+      .collection-block-plant
+        margin-right: 30px
+      .collection-wrapper-img
+        margin-right: 0px
+      .collection-img
+        width: 100%
+        height: 100%
+      .collection-block
+      .collection-block-text
+        flex-basis: 100%
+        margin-top: 31px
+        .collection-title
+          font-size: 48px
+          line-height: 60px
+          min-width: 100%
+        .collection-description
+          font-size: 20px
+          line-height: 36px
+          min-width: 632px
+          margin-bottom: 24px
 @media ( max-width: 767px)
   .container
-    width: 88%
+    width: 90%
   .header
     padding-top: 18px
     &__logo
       margin-left: 10px
     .menu-button
       margin-right: 10px
+    .main-section
+      background-position: -447px -19px
+  .collection
+    &-wrapper
+      padding-left: 0px
+      padding-right: 0px
+      justify-content: space-between
+      .collection-block-plant
+        flex-basis: 48%
+        margin-right: 0px
+        min-width: auto
+      .collection-wrapper-img
+        flex-basis: 48%
+        min-width: auto
+        min-height: auto
+        .collection-img
+          margin-top: 9px
+          margin-bottom: 9px
+      .collection-block
+        min-width: auto
+      .collection-block-text
+        flex-basis: 100%
+        margin-top: 31px
+        .collection-title
+          min-width: auto
+          width: auto
+          font-size: 43px
+        .collection-description
+          font-size: 19px
+          line-height: 36px
+          min-width: auto
+          width: auto
+          margin-bottom: 24px
 @media ( max-width: 576px)
   .header
+    &-wrapper
+      margin-bottom: 39px
     &__logo
-      margin-left: 5px
+      margin-left: 9px
     .menu-button
       margin-right: 0px
+    .main-section
+      border-radius: 0px
+      left: 0px
+      right: 0px
+      position: absolute
+      background-position: 79.6% -5px
+      &::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        background: linear-gradient(180deg, rgba(238, 238, 238, 0.0001) 47.32%, #E8EAE9 65.51%)
+        z-index: 0
+      .main-wrapper
+        padding-top: 380px
+        padding-left: 0px
+        padding-bottom: 18px
+      .main-tag
+        width: 200px
+        display: inline-block
+        margin-left: 51%
+        transform: translateX(-50%)
+        padding: 2px 26px
+        margin-bottom:
+        z-index: 3
+      .main-title
+        display: inline-block
+        margin-left: 50%
+        transform: translateX(-50%)
+        font-size: 32px
+        line-height: 40px
+        max-width: 247px
+        text-align: center
+        margin-top: 17px
+        margin-bottom: 7px
+      .main-subtitle
+        display: inline-block
+        margin-left: 50%
+        transform: translateX(-50%)
+        min-width: 241px
+        margin-bottom: 24px
+        font-size: 16px
+        line-height: 28px
+        text-align: center
+        z-index: 3
+      .main-button
+        margin-left: 50%
+        transform: translateX(-50%)
+        min-width: 257px
+        padding: 13px 37px 13px 37px
+        font-size: 16px
+        line-height: 22px
+        margin-bottom: 22px
+      .main-advantages
+        flex-wrap: wrap
+        justify-content: center
+        .advantages-item
+          margin-bottom: 16px
+      .main-advantages
+        margin-left: 53%
+        transform: translateX(-50%)
+        width: 100%
+      .main-icon-block
+        width: 24px
+        height: 24px
+        .main-icon
+          padding: 4px
+  .collection
+    padding-top: 960px
+    &-wrapper
+      .collection-block-plant
+        flex-basis: 100%
+        height: 300px
+        border-radius: 4px
+        overflow: hidden
+        margin-bottom: 14px
+        .collection-img
+          object-fit: cover
+          object-position: center -81px
+      .collection-wrapper-img
+        flex-direction: row
+        min-width: 100%
+        .collection-img
+          margin-top: 0px
+          object-fit: cover
+      .collection-block
+        flex-basis: 48%
+        border-radius: 4px
+        overflow: hidden
+        height: 97px
+        max-height: 150px
+      .collection-block-text
+        margin-top: 34px
+        .collection-title
+          font-size: 28px
+          line-height: 36px
+          text-align: center
+          margin-bottom: 24px
+        .collection-description
+          font-size: 16px
+          line-height: 28px
+          text-align: center
+        .collection-button
+          display: none

@@ -1,0 +1,86 @@
+.trends
+  &-wrapper
+    padding-left: 77px
+    padding-right: 70px
+    .trends-header
+      display: flex
+      align-items: center
+      justify-content: space-between
+      .trends-title
+        font-family: 'HK Grotesk'
+        font-size: 48px
+        line-height: 60px
+        color: $color-text
+        letter-spacing: 0.6px
+        margin-top: -5px
+        margin-bottom: 0px
+        margin-left: -2px
+      .filters
+        display: flex
+        align-items: flex-start
+        margin-top: 3px
+        .catigories
+          font-family: Open Sans
+          font-size: 18px
+          line-height: 25px
+          color: $description-text
+          &-link
+            text-decoration: none
+            margin-right: 38px
+            margin-left: auto
+            &__margin
+              margin-right: 0px
+    .trends-goods
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      padding-top: 54px
+      .trends-card-more
+        background-color: $additional
+        padding: 120px 27px 104px 27px
+        border-radius: 8px
+        display: flex
+        flex-direction: column
+        max-height: 350px
+        &:hover
+          background-color: darken($additional,8% )
+          cursor: pointer
+          transition: 0.3s
+        .see-more-img
+          margin-top: 7px
+        .see-more
+          font-size: 24px
+          line-height: 32px
+          font-family: 'HK Grotesk'
+          font-weight: 700
+          text-align: center
+          color: white
+          margin-top: 24px
+      .trends-card
+        border-radius: 8px
+        margin-bottom: 47px
+        overflow: hidden
+        .card-title
+          font-size: 24px
+          line-height: 32px
+          font-family: 'HK Grotesk'
+          font-weight: 700
+          font-style: normal
+          color: $color-text
+          margin-top: 13px
+          margin-left: 11px
+          margin-bottom: 0px
+          letter-spacing: 0.2px
+        .card-value
+          display: flex
+          justify-content: space-between
+          align-items: center
+          margin-top: 7px
+          .card-price
+            font-size: 20px
+            line-height: 36px
+            font-family: Open Sans
+            color: $description-text
+            margin-left: 11px
+          .icon-cart
+            margin-right: 10px
