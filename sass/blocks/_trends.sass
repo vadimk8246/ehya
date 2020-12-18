@@ -18,19 +18,21 @@
       .filters
         display: flex
         align-items: flex-start
-        margin-top: 3px
+        margin-top: 7px
         .catigories
           font-family: Open Sans
           font-size: 18px
           line-height: 25px
           color: $description-text
-          &-link
-            text-decoration: none
-            margin-right: 38px
-            margin-left: auto
-            &__margin
-              margin-right: 0px
-    .trends-goods
+          margin-right: 38px
+          margin-left: auto
+          cursor: pointer
+          &__margin
+            margin-right: 0px
+        .tabs-item--active
+          color: $color-text
+          font-weight: 700
+    .news-wrapper,.best-wrapper,.soon-wrapper
       display: flex
       flex-wrap: wrap
       justify-content: space-between
@@ -57,9 +59,7 @@
           color: white
           margin-top: 24px
       .trends-card
-        border-radius: 8px
         margin-bottom: 47px
-        overflow: hidden
         .card-title
           font-size: 24px
           line-height: 32px
@@ -71,6 +71,11 @@
           margin-left: 11px
           margin-bottom: 0px
           letter-spacing: 0.2px
+        .trends-img
+          width: 260px
+          height: 350px
+          border-radius: 8px
+          overflow: hidden
         .card-value
           display: flex
           justify-content: space-between
@@ -84,3 +89,8 @@
             margin-left: 11px
           .icon-cart
             margin-right: 10px
+            cursor: pointer
+  .content-item
+    display: none
+  .content-item--active
+    display: block

@@ -5,7 +5,7 @@
     display: flex
     flex-direction: column
     justify-content: space-between
-    min-height: 493px
+    min-height: 490px
     margin-right: 57px
   &-wrapper
     padding: 0px 70px
@@ -13,11 +13,20 @@
     align-items: center
     .collection-block-plant
       margin-right: 30px
-      min-width: 320px
+      height: 490px
       border-radius: 8px
+      .collection-img
+        height: 100%
+        max-width: 320px
+        border-radius: 8px
+        overflow: hidden
+        object-fit: cover
     .collection-block
       min-width: 320px
       border-radius: 8px
+      height: 230px
+      .collection-img
+        height: 230px
     .collection-block-text
       padding-top: 33px
       padding-bottom: 33px
@@ -36,7 +45,9 @@
       line-height: 36px
       margin-bottom: 40px
       font-family: Open Sans
-      width: 360px
+      width: 392px
+    .collection-description--mobile
+      display: none
     .collection-button
       border: none
       background-color: #fff

@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/fonts.css" />
     <title>Ehya - main page</title>
@@ -97,7 +98,7 @@
         <div class="collection-wrapper">
           <div class="collection-block-plant">
             <img
-              src="img/newcollection-plant-woman.jpg"
+              src="img/newcollection-plant-woman.png"
               alt="Новая коллекция: Изображение 1"
               class="collection-img"
             />
@@ -120,10 +121,16 @@
           </div>
           <div class="collection-block-text">
             <h2 class="collection-title" lang="en">Новая зимняя коллекция</h2>
-            <p class="collection-description">
-              Сейчас зимний сезон. Вы&#160;можете увидеть больше из этой
-              коллекции, нажав кнопку ниже. Успейте купить, пока коллекция есть
-              в наличии. Используйте код EHYA20, чтобы получить 20% скидку.
+            <p class="collection-description collection-description--mobile">
+              Сейчас зимний сезон. Вы можете увидеть больше из этой
+              коллекции,&#160;нажав кнопку ниже. Успейте купить, пока коллекция
+              есть в наличии. Используйте код EHYA20, чтобы получить
+              20%&#160;скидку.
+            </p>
+            <p class="collection-description collection-description--display">
+              Сейчас зимний сезон. Вы можете увидеть больше из этой коллекции,
+              нажав кнопку ниже. Успейте купить, пока коллекция есть в наличии.
+              Используйте код EHYA20, чтобы получить 20%&#160;скидку.
             </p>
             <button class="collection-button">
               <span class="collection-look">Посмотреть коллекцию</span>
@@ -139,117 +146,560 @@
           <div class="trends-header">
             <h2 class="trends-title" lang="en">Тренды</h2>
             <div class="filters">
-              <a href="#" class="catigories-link">
-                <span class="catigories tabs-item">Новинки</span>
-              </a>
-              <a href="#" class="catigories-link">
-                <span class="catigories tabs-item">Лучшее</span>
-              </a>
-              <a href="#" class="catigories-link catigories-link__margin">
-                <span class="catigories tabs-item">Скоро</span>
-              </a>
+              <span
+                data-target="#news"
+                class="catigories tabs-item tabs-item--active"
+              >
+                Новинки
+              </span>
+              <span data-target="#best" class="catigories tabs-item"
+                >Лучшее</span
+              >
+              <span
+                data-target="#soon"
+                class="catigories tabs-item catigories__margin"
+                >Скоро</span
+              >
             </div>
           </div>
           <div class="trends-goods">
-            <div class="trends-card content-item">
-              <img src="img/trends-1.jpg" alt="1 Стиль" class="trends-img" />
-              <h3 class="card-title" lang="en">Minimalist Style</h3>
-              <div class="card-value">
-                <span class="card-price">$25.7</span>
-                <img
-                  src="img/icon-shopping-cart.svg"
-                  alt="Иконка добавить в корзину"
-                  class="icon-cart"
-                />
+            <div class="news content-item content-item--active" id="news">
+              <div class="news-wrapper">
+                <div class="trends-card">
+                  <img
+                    src="img/trends-1.jpg"
+                    alt="1 Стиль"
+                    class="trends-img"
+                  />
+                  <h3 class="card-title" lang="en">Minimalist Style</h3>
+                  <div class="card-value">
+                    <span class="card-price">$25.7</span>
+                    <img
+                      src="img/icon-shopping-cart.svg"
+                      alt="Иконка добавить в корзину"
+                      class="icon-cart"
+                    />
+                  </div>
+                </div>
+                <div class="trends-card">
+                  <img
+                    src="img/trends-3.jpg"
+                    alt="2 Стиль"
+                    class="trends-img"
+                  />
+                  <h3 class="card-title" lang="en">Luxury Gown</h3>
+                  <div class="card-value">
+                    <span class="card-price">$30.6</span>
+                    <img
+                      src="img/icon-shopping-cart.svg"
+                      alt="Иконка добавить в корзину"
+                      class="icon-cart"
+                    />
+                  </div>
+                </div>
+                <div class="trends-card">
+                  <img
+                    src="img/trends-5.jpg"
+                    alt="3 Стиль"
+                    class="trends-img"
+                  />
+                  <h3 class="card-title" lang="en">Full Coloristy</h3>
+                  <div class="card-value">
+                    <span class="card-price">$25.7</span>
+                    <img
+                      src="img/icon-shopping-cart.svg"
+                      alt="Иконка добавить в корзину"
+                      class="icon-cart"
+                    />
+                  </div>
+                </div>
+                <div class="trends-card">
+                  <img
+                    src="img/trends-7.jpg"
+                    alt="4 Стиль"
+                    class="trends-img"
+                  />
+                  <h3 class="card-title" lang="en">Pinky Winky</h3>
+                  <div class="card-value">
+                    <span class="card-price">$109</span>
+                    <img
+                      src="img/icon-shopping-cart.svg"
+                      alt="Иконка добавить в корзину"
+                      class="icon-cart"
+                    />
+                  </div>
+                </div>
+                <div class="trends-card">
+                  <img
+                    src="img/trends-2.jpg"
+                    alt="5 Стиль"
+                    class="trends-img"
+                  />
+                  <h3 class="card-title" lang="en">Holiday Vibes</h3>
+                  <div class="card-value">
+                    <span class="card-price">$51.2</span>
+                    <img
+                      src="img/icon-shopping-cart.svg"
+                      alt="Иконка добавить в корзину"
+                      class="icon-cart"
+                    />
+                  </div>
+                </div>
+                <div class="trends-card">
+                  <img
+                    src="img/trends-4.jpg"
+                    alt="6 Стиль"
+                    class="trends-img"
+                  />
+                  <h3 class="card-title" lang="en">Swaggie Shaggy</h3>
+                  <div class="card-value">
+                    <span class="card-price">$81.3</span>
+                    <img
+                      src="img/icon-shopping-cart.svg"
+                      alt="Иконка добавить в корзину"
+                      class="icon-cart"
+                    />
+                  </div>
+                </div>
+                <div class="trends-card">
+                  <img
+                    src="img/trends-6.jpg"
+                    alt="7 Стиль"
+                    class="trends-img"
+                  />
+                  <h3 class="card-title" lang="en">Red Formal</h3>
+                  <div class="card-value">
+                    <span class="card-price">$66.8</span>
+                    <img
+                      src="img/icon-shopping-cart.svg"
+                      alt="Иконка добавить в корзину"
+                      class="icon-cart"
+                    />
+                  </div>
+                </div>
+                <div class="see-more-wrapper">
+                  <div class="trends-card-more">
+                    <img
+                      src="img/plus.svg"
+                      alt="Иконка смотреть больше"
+                      class="see-more-img"
+                    />
+                    <span class="see-more" lang="en"
+                      >Смотреть<br />
+                      больше коллекций</span
+                    >
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="trends-card content-item">
-              <img src="img/trends-3.jpg" alt="2 Стиль" class="trends-img" />
-              <h3 class="card-title" lang="en">Luxury Gown</h3>
-              <div class="card-value">
-                <span class="card-price">$30.6</span>
-                <img
-                  src="img/icon-shopping-cart.svg"
-                  alt="Иконка добавить в корзину"
-                  class="icon-cart"
-                />
+            <div class="best content-item" id="best">
+              <div class="best-wrapper">
+                <div class="trends-card">
+                  <img
+                    src="img/trends-best-1.jpg"
+                    alt="Лучшее 1 стиль"
+                    class="trends-img"
+                  />
+                  <h3 class="card-title" lang="en">Minimalist Style</h3>
+                  <div class="card-value">
+                    <span class="card-price">$25.7</span>
+                    <img
+                      src="img/icon-shopping-cart.svg"
+                      alt="Иконка добавить в корзину"
+                      class="icon-cart"
+                    />
+                  </div>
+                </div>
+                <div class="trends-card">
+                  <img
+                    src="img/trends-best-2.jpg"
+                    alt="Лучшее 2 стиль"
+                    class="trends-img"
+                  />
+                  <h3 class="card-title" lang="en">Swaggie Shaggy</h3>
+                  <div class="card-value">
+                    <span class="card-price">$81.3</span>
+                    <img
+                      src="img/icon-shopping-cart.svg"
+                      alt="Иконка добавить в корзину"
+                      class="icon-cart"
+                    />
+                  </div>
+                </div>
+                <div class="trends-card">
+                  <img
+                    src="img/trends-best-3.jpg"
+                    alt="Лучшее 3 стиль"
+                    class="trends-img"
+                  />
+                  <h3 class="card-title" lang="en">Holiday Vibes</h3>
+                  <div class="card-value">
+                    <span class="card-price">$51.2</span>
+                    <img
+                      src="img/icon-shopping-cart.svg"
+                      alt="Иконка добавить в корзину"
+                      class="icon-cart"
+                    />
+                  </div>
+                </div>
+                <div class="trends-card">
+                  <img
+                    src="img/trends-6.jpg"
+                    alt="Лучшее 4 стиль"
+                    class="trends-img"
+                  />
+                  <h3 class="card-title" lang="en">Red Formal</h3>
+                  <div class="card-value">
+                    <span class="card-price">$66.8</span>
+                    <img
+                      src="img/icon-shopping-cart.svg"
+                      alt="Иконка добавить в корзину"
+                      class="icon-cart"
+                    />
+                  </div>
+                </div>
+                <div class="see-more-wrapper">
+                  <div class="trends-card-more">
+                    <img
+                      src="img/plus.svg"
+                      alt="Иконка смотреть больше"
+                      class="see-more-img"
+                    />
+                    <span class="see-more" lang="en"
+                      >Смотреть<br />
+                      больше коллекций</span
+                    >
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="trends-card content-item">
-              <img src="img/trends-5.jpg" alt="3 Стиль" class="trends-img" />
-              <h3 class="card-title" lang="en">Full Coloristy</h3>
-              <div class="card-value">
-                <span class="card-price">$25.7</span>
-                <img
-                  src="img/icon-shopping-cart.svg"
-                  alt="Иконка добавить в корзину"
-                  class="icon-cart"
-                />
+            <div class="soon content-item" id="soon">
+              <div class="soon-wrapper">
+                <div class="trends-card">
+                  <img
+                    src="img/trends-soon-1.jpg"
+                    alt="1 Стиль скоро"
+                    class="trends-img"
+                  />
+                  <h3 class="card-title" lang="en">Luxury Gown</h3>
+                  <div class="card-value">
+                    <span class="card-price">$56.7</span>
+                    <img
+                      src="img/icon-shopping-cart.svg"
+                      alt="Иконка добавить в корзину"
+                      class="icon-cart"
+                    />
+                  </div>
+                </div>
+                <div class="trends-card">
+                  <img
+                    src="img/trends-soon-2.jpg"
+                    alt="2 Стиль скоро"
+                    class="trends-img"
+                  />
+                  <h3 class="card-title" lang="en">Holiday Vibes</h3>
+                  <div class="card-value">
+                    <span class="card-price">$84.2</span>
+                    <img
+                      src="img/icon-shopping-cart.svg"
+                      alt="Иконка добавить в корзину"
+                      class="icon-cart"
+                    />
+                  </div>
+                </div>
+                <div class="trends-card">
+                  <img
+                    src="img/trends-soon-3.jpg"
+                    alt="3 Стиль скоро"
+                    class="trends-img"
+                  />
+                  <h3 class="card-title" lang="en">Minimalist Style</h3>
+                  <div class="card-value">
+                    <span class="card-price">$47.9</span>
+                    <img
+                      src="img/icon-shopping-cart.svg"
+                      alt="Иконка добавить в корзину"
+                      class="icon-cart"
+                    />
+                  </div>
+                </div>
+                <div class="see-more-wrapper">
+                  <div class="trends-card-more">
+                    <img
+                      src="img/plus.svg"
+                      alt="Иконка смотреть больше"
+                      class="see-more-img"
+                    />
+                    <span class="see-more" lang="en"
+                      >Смотреть<br />
+                      больше коллекций</span
+                    >
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="trends-card content-item">
-              <img src="img/trends-7.jpg" alt="4 Стиль" class="trends-img" />
-              <h3 class="card-title" lang="en">Pinky Winky</h3>
-              <div class="card-value">
-                <span class="card-price">$109</span>
-                <img
-                  src="img/icon-shopping-cart.svg"
-                  alt="Иконка добавить в корзину"
-                  class="icon-cart"
-                />
-              </div>
-            </div>
-            <div class="trends-card content-item">
-              <img src="img/trends-2.jpg" alt="5 Стиль" class="trends-img" />
-              <h3 class="card-title" lang="en">Holiday Vibes</h3>
-              <div class="card-value">
-                <span class="card-price">$51.2</span>
-                <img
-                  src="img/icon-shopping-cart.svg"
-                  alt="Иконка добавить в корзину"
-                  class="icon-cart"
-                />
-              </div>
-            </div>
-            <div class="trends-card content-item">
-              <img src="img/trends-4.jpg" alt="6 Стиль" class="trends-img" />
-              <h3 class="card-title" lang="en">Swaggie Shaggy</h3>
-              <div class="card-value">
-                <span class="card-price">$81.3</span>
-                <img
-                  src="img/icon-shopping-cart.svg"
-                  alt="Иконка добавить в корзину"
-                  class="icon-cart"
-                />
-              </div>
-            </div>
-            <div class="trends-card content-item">
-              <img src="img/trends-6.jpg" alt="7 Стиль" class="trends-img" />
-              <h3 class="card-title" lang="en">Red Formal</h3>
-              <div class="card-value">
-                <span class="card-price">$66.8</span>
-                <img
-                  src="img/icon-shopping-cart.svg"
-                  alt="Иконка добавить в корзину"
-                  class="icon-cart"
-                />
-              </div>
-            </div>
-            <div class="trends-card-more content-item">
-              <img
-                src="img/plus.svg"
-                alt="Иконка смотреть больше"
-                class="see-more-img"
-              />
-              <span class="see-more" lang="en"
-                >Смотреть<br />
-                больше коллекций</span
-              >
             </div>
           </div>
         </div>
       </div>
     </section>
+    <section class="review">
+      <div class="container">
+        <div class="slider">
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="review-wrapper">
+                  <img
+                    src="img/quote-left.png"
+                    alt="Картинка запятая"
+                    class="review-img"
+                  />
+                  <p class="review-text" lang="en">
+                    Мне очень нравятся дизайн и стили, которые создает Ehya. Они
+                    такие разные и новаторские. Я покупала несколько раз из
+                    коллекций, и что мне нравится, это то, что они действительно
+                    неподвластны времени, а качество ткани просто
+                    превосходно.<span class="review-text-mobile">
+                      Я с нетерпением жду новых коллекций</span
+                    >
+                    <span class="review-text-tablet">от сезона к сезону</span>
+                  </p>
+                  <h3 class="review-author" lang="en">
+                    Алисия Пума - клиент Fashun
+                  </h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="review-wrapper">
+                  <img
+                    src="img/quote-left.png"
+                    alt="Картинка запятая"
+                    class="review-img"
+                  />
+                  <p class="review-text" lang="en">
+                    Мне очень нравятся дизайн и стили, которые создает Ehya. Они
+                    такие разные и новаторские. Я покупала несколько раз из
+                    коллекций, и что мне нравится, это то, что они действительно
+                    неподвластны времени, а качество ткани просто
+                    превосходно.<span class="review-text-mobile">
+                      Я с нетерпением жду новых коллекций</span
+                    >
+                    <span class="review-text-tablet">от сезона к сезону</span>
+                  </p>
+                  <h3 class="review-author" lang="en">
+                    Алисия Пума - клиент Fashun
+                  </h3>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="review-wrapper">
+                  <img
+                    src="img/quote-left.png"
+                    alt="Картинка запятая"
+                    class="review-img"
+                  />
+                  <p class="review-text" lang="en">
+                    Мне очень нравятся дизайн и стили, которые создает Ehya. Они
+                    такие разные и новаторские. Я покупала несколько раз из
+                    коллекций, и что мне нравится, это то, что они действительно
+                    неподвластны времени, а качество ткани просто
+                    превосходно.<span class="review-text-mobile">
+                      Я с нетерпением жду новых коллекций</span
+                    >
+                    <span class="review-text-tablet">от сезона к сезону</span>
+                  </p>
+                  <h3 class="review-author" lang="en">
+                    Алисия Пума - клиент Fashun
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr class="divider" />
+    <section class="history">
+      <div class="container">
+        <div class="history-wrapper">
+          <div class="history-text">
+            <span class="history-tag">Истории</span>
+            <h2 class="history-title" lang="en">
+              <span class="history-title-mobile">Это</span> История Fashun
+            </h2>
+            <p class="history-description">
+              Ознакомьтесь с нашим рассказом о&#160;моде. Написано нашим
+              дизайнером и специалистом.
+            </p>
+            <div class="arrows">
+              <div class="arrows-prev">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="14"
+                  viewBox="0 0 15 14"
+                  fill="none"
+                  class="svg-width"
+                >
+                  <path
+                    d="M8.31689 12.9375C8.62939 12.625 8.59814 12.1562 8.31689 11.8438L4.53564 8.25H13.5356C13.9419 8.25 14.2856 7.9375 14.2856 7.5V6.5C14.2856 6.09375 13.9419 5.75 13.5356 5.75H4.53564L8.31689 2.1875C8.59814 1.875 8.62939 1.40625 8.31689 1.09375L7.62939 0.40625C7.34814 0.125 6.84814 0.125 6.56689 0.40625L0.504395 6.5C0.191895 6.78125 0.191895 7.25 0.504395 7.53125L6.56689 13.625C6.84814 13.9062 7.31689 13.9062 7.62939 13.625L8.31689 12.9375Z"
+                    fill="#959EAD"
+                    class="arrows-img"
+                  />
+                </svg>
+              </div>
+              <div class="arrows-next">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="14"
+                  viewBox="0 0 15 14"
+                  class="svg-width"
+                >
+                  <path
+                    d="M6.25439 1.0625C5.94189 1.375 5.97314 1.84375 6.25439 2.15625L10.0356 5.75H1.03564C0.629395 5.75 0.285645 6.0625 0.285645 6.5V7.5C0.285645 7.90625 0.629395 8.25 1.03564 8.25H10.0356L6.25439 11.8125C5.97314 12.125 5.94189 12.5938 6.25439 12.9062L6.94189 13.5938C7.22314 13.875 7.72314 13.875 8.00439 13.5938L14.0669 7.5C14.3794 7.21875 14.3794 6.75 14.0669 6.46875L8.00439 0.375C7.72314 0.09375 7.25439 0.09375 6.94189 0.375L6.25439 1.0625Z"
+                    fill="#959EAD"
+                    class="arrows-img"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-container articles-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="articles">
+                  <div class="article article--margin">
+                    <img src="img/history-1.jpg" alt="" class="article-img" />
+                    <div class="article-text-wrapper">
+                      <p class="article-text" lang="en">
+                        Mix & Match Style 01: повседневный и формальный стиль
+                      </p>
+                      <a href="#" class="continue-link"
+                        ><span class="continue">Читать далее</span></a
+                      >
+                    </div>
+                  </div>
+                  <div class="article">
+                    <img src="img/history-2.jpg" alt="" class="article-img" />
+                    <div class="article-text-wrapper">
+                      <p class="article-text" lang="en">
+                        Лайфхак: Купите одежду Thrifft на воскресном рынке
+                      </p>
+                      <a href="#" class="continue-link"
+                        ><span class="continue">Читать далее</span></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="articles">
+                  <div class="article article--margin">
+                    <img src="img/history-1.jpg" alt="" class="article-img" />
+                    <div class="article-text-wrapper">
+                      <p class="article-text" lang="en">
+                        Mix & Match Style 01: повседневный и формальный стиль
+                      </p>
+                      <a href="#" class="continue-link"
+                        ><span class="continue">Читать далее</span></a
+                      >
+                    </div>
+                  </div>
+                  <div class="article">
+                    <img src="img/history-2.jpg" alt="" class="article-img" />
+                    <div class="article-text-wrapper">
+                      <p class="article-text" lang="en">
+                        Лайфхак: Купите одежду Thrifft на воскресном рынке
+                      </p>
+                      <a href="#" class="continue-link"
+                        ><span class="continue">Читать далее</span></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="articles">
+                  <div class="article article--margin">
+                    <img
+                      src="img/newcollection-2.jpg"
+                      alt=""
+                      class="article-img"
+                    />
+                    <div class="article-text-wrapper">
+                      <p class="article-text" lang="en">
+                        Mix & Match Style 01: повседневный и формальный стиль
+                      </p>
+                      <a href="#" class="continue-link"
+                        ><span class="continue">Читать далее</span></a
+                      >
+                    </div>
+                  </div>
+                  <div class="article">
+                    <img
+                      src="img/newcollection-3.jpg"
+                      alt=""
+                      class="article-img"
+                    />
+                    <div class="article-text-wrapper">
+                      <p class="article-text" lang="en">
+                        Лайфхак: Купите одежду Thrifft на воскресном рынке
+                      </p>
+                      <a href="#" class="continue-link"
+                        ><span class="continue">Читать далее</span></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter-wrapper">
+          <div class="newsletter-text">
+            <h2 class="newsletter-title" lang="en">Подпишитесь</h2>
+            <p class="newsletter-description">
+              Напишите свой адрес электронной почты. Мы&#160;будем присылать вам
+              новости из мира моды.
+            </p>
+          </div>
+          <form
+            action="send.php"
+            method="POST"
+            class="newsletter-form"
+            novalidate="novalidate"
+          >
+            <img
+              src="img/email-form.svg"
+              alt="Иконка письма"
+              class="newsletter-img"
+            />
+            <div class="form-wrapper">
+              <input
+                type="email"
+                class="newsletter-input"
+                placeholder="Ваш Email"
+                name="email"
+                required
+              />
+            </div>
+            <button class="newsletter-button" type="submit">Подписаться</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

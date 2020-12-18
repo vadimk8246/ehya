@@ -1,6 +1,19 @@
 @media ( max-width: 1400px)
   .container
     max-width: 1180px
+  .trends
+    &-wrapper
+      .news-wrapper,.best-wrapper,.soon-wrapper
+        .trends-card-more
+          max-height: 323px
+          padding: 110px 17px 104px 17px
+        .trends-card
+          .trends-img
+            width: 240px
+            height: 323px
+  .collection
+    &-wrapper
+      padding: 0px 60px
 @media ( max-width: 1200px)
   .container
     max-width: 960px
@@ -20,10 +33,39 @@
         .collection-description
           width: 270px
           font-size: 18px
+  .history
+    .history-wrapper
+      padding: 0px 0px
+  .trends
+    &-wrapper
+      padding-left: 0px
+      padding-right: 0px
+      .news-wrapper,.best-wrapper,.soon-wrapper
+        .trends-card-more
+          max-height: 296px
+          padding: 95px 15px 104px 15px
+          .see-more
+            font-size: 22px
+        .trends-card
+          .trends-img
+            width: 220px
+            height: 296px
+          .card-title
+            margin-left: 0px
+          .card-value
+            .card-price
+              margin-left: 0px
+  .divider
+    width: 960px
+  .newsletter
+    .newsletter-wrapper
+      padding: 0px 0px
 @media ( max-width: 991px)
   .container
     max-width: 728px
   .header
+    .main-section
+      margin-top: 78px
     .menu
       &__items
         &::after
@@ -38,9 +80,25 @@
           background-color: transparent
           color: $additional
     &-wrapper
-      margin-bottom: 44px
+      margin-bottom: 0px
+      position: fixed
+      left: 0
+      right: 0
+      top: 0
+      background-color: #fff
+      padding-top: 26px
+      padding-bottom: 20px
+      z-index: 100
     &__logo
-      margin-left: 41px
+      margin-left: 60px
+  .trends
+    &-wrapper
+      .news-wrapper,.best-wrapper,.soon-wrapper
+        .trends-card-more
+          &:hover
+            background-color: $additional
+            cursor: pointer
+            transition: 0.3s
   .main-section
     .main-wrapper
       .main-button
@@ -52,7 +110,7 @@
         color: $additional
   .menu-button
     display: block
-    margin-right: 33px
+    margin-right: 54px
   .nav,.header__button
     display: none
   .main-section
@@ -82,17 +140,23 @@
           margin-top: -4px
   .collection
     padding-top: 79px
+    padding-bottom: 41px
     &-wrapper
       flex-wrap: wrap
       padding-left: 28px
       padding-right: 28px
       .collection-block-plant
-        margin-right: 30px
+        margin-right: 26px
+        flex-basis: 48%
+        .collection-img
+          width: 100%
+          max-width: none
       .collection-wrapper-img
         margin-right: 0px
-      .collection-img
-        width: 100%
-        height: 100%
+        flex-basis: 48%
+        .collection-img
+          width: 100%
+          height: 100%
       .collection-block
       .collection-block-text
         flex-basis: 100%
@@ -106,35 +170,159 @@
           line-height: 36px
           min-width: 632px
           margin-bottom: 24px
+  .trends
+    &-wrapper
+      padding-left: 60px
+      padding-right: 60px
+      .trends-header
+        flex-wrap: wrap
+        .trends-title
+          flex-basis: 100%
+          text-align: center
+          margin-bottom: 33px
+        .filters
+          margin: 0 auto
+          .catigories
+            margin-left: 0px
+            text-align: center
+      .news-wrapper,.best-wrapper,.soon-wrapper
+        .trends-card-more
+          max-height: 351px
+          padding: 120px 37px 109px 37px
+          .see-more
+            font-size: 24px
+        .trends-card
+          margin-bottom: 45px
+          .trends-img
+            width: 280px
+            height: 351px
+            object-position: center center
+          .card-title
+            margin-left: 10px
+            margin-top: 16px
+          .card-value
+            margin-top: 5px
+            .card-price
+              margin-left: 10px
+  .review
+    padding-top: 43px
+    .swiper-container
+      width: 630px
+      height: 415px
+    .review-text-tablet
+      display: none
+  .divider
+    max-width: 728px
+  .history
+    padding-top: 75px
+    padding-bottom: 93px
+    .history-wrapper
+      padding: 0px 0px
+      display: flex
+      flex-direction: column
+      .history-text
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        flex-basis: 100%
+        .history-tag
+          margin: 0 auto
+          margin-bottom: 15px
+        .history-title
+          width: auto
+          margin: 0 auto
+          margin-bottom: 23px
+        .history-description
+          width: auto
+          margin-bottom: 48px
+          text-align: center
+          width: 550px
+          margin: 0 auto
+          margin-bottom: 35px
+        .arrows
+          display: flex
+          justify-content: center
+          width: 100%
+          margin-left: 10px
+          margin-bottom: 30px
+          .arrows-prev,.arrows-next
+            border: 2px solid $color-text
+            .arrows-img
+              fill: $color-text
+              transition: 0.3s
+      .articles-container
+        width: 720px
+        height: 470px
+        .articles
+          display: flex
+          padding-left: 20px
+          .article
+            &-img
+              width: 322px
+              height: 317px
+            .article-text-wrapper
+              right: 0px
+              .continue
+                &:hover
+                  color: $additional
+  .newsletter
+    padding-top: 65px
+    .newsletter-wrapper
+      flex-wrap: wrap
+      .newsletter-text
+        flex-basis: 100%
+        .newsletter-title
+          text-align: center
+          margin: 0 auto
+          margin-bottom: 20px
+        .newsletter-description
+          text-align: center
+          margin: 0 auto
+          margin-bottom: 57px
+      .newsletter-form
+        margin-top: 0px
+        margin: 0 auto
 @media ( max-width: 767px)
   .container
     width: 90%
   .header
     padding-top: 18px
     &__logo
-      margin-left: 10px
     .menu-button
-      margin-right: 10px
     .main-section
       background-position: -447px -19px
+      margin-top: 71px
   .collection
+    padding-bottom: 58px
     &-wrapper
       padding-left: 0px
       padding-right: 0px
       justify-content: space-between
+      flex-wrap: wrap
       .collection-block-plant
-        flex-basis: 48%
+        flex-basis: 100%
+        height: 460px
+        min-height: 366px
         margin-right: 0px
-        min-width: auto
-      .collection-wrapper-img
-        flex-basis: 48%
-        min-width: auto
-        min-height: auto
+        margin-bottom: 15px
         .collection-img
-          margin-top: 9px
-          margin-bottom: 9px
+          min-width: auto
+          height: 100%
+          min-height: auto
+          object-position: center bottom
+      .collection-wrapper-img
+        min-height: auto
+        flex-basis: 100%
+        flex-direction: row
+        .collection-block
+          min-width: auto
+          flex-basis: 49%
+          height: auto
+          margin-bottom: 10px
+          .collection-img
+            width: 100%
+            height: 100%
       .collection-block
-        min-width: auto
       .collection-block-text
         flex-basis: 100%
         margin-top: 31px
@@ -148,14 +336,128 @@
           min-width: auto
           width: auto
           margin-bottom: 24px
+        .collection-description--display
+          display: none
+        .collection-description--mobile
+          display: block
+  .trends
+    &-wrapper
+      padding-left: 0px
+      padding-right: 0px
+      .trends-header
+        .trends-title
+          margin-bottom: 28px
+          font-size: 28px
+          line-height: 36px
+        .filters
+          padding-left: 11px
+          .catigories
+            font-size: 16px
+            line-height: 22px
+            margin-right: 16px
+      .news-wrapper,.best-wrapper,.soon-wrapper
+        padding-top: 35px
+        .see-more-wrapper
+          flex-basis: 48%
+          max-height: 360px
+          max-width: 280px
+          .trends-card-more
+            max-height: 351px
+            padding: 124px 37px 135px 37px
+            .see-more
+              margin-top: 16px
+              font-size: 17px
+              line-height: 20px
+        .trends-card
+          margin-bottom: 85px
+          flex-basis: 48%
+          max-height: 360px
+          max-width: 280px
+          .trends-img
+            width: 100%
+            object-position: center top
+            object-fit: cover
+          .card-title
+            margin-left: 0px
+            margin-top: 8px
+            font-size: 16px
+            line-height: 20px
+          .card-value
+            margin-top: 5px
+            .icon-cart
+              max-width: 18px
+            .card-price
+              margin-left: 0px
+              font-size: 16px
+              line-height: 28px
+  .review
+    .swiper-container
+      width: 90%
+      height: 450px
+    .review-text
+    .review-text-tablet
+  .divider
+    width: 99%
+  .history
+    .history-wrapper
+      .history-text
+        .history-tag
+          margin: 0 auto
+          margin-bottom: 15px
+        .history-title
+        .history-title-mobile
+          display: none
+        .history-description
+          width: auto
+          margin-bottom: 48px
+          text-align: center
+          width: 550px
+          margin: 0 auto
+          margin-bottom: 35px
+        .arrows
+          display: flex
+          justify-content: center
+          width: 100%
+          margin-left: 10px
+          margin-bottom: 30px
+          .arrows-prev,.arrows-next
+            border: 2px solid $color-text
+            .arrows-img
+              fill: $color-text
+              transition: 0.3s
+      .articles-container
+        width: 100%
+        height: 470px
+        .articles
+          display: flex
+          padding-left: 20px
+          .article
+            flex-basis: 48%
+            &-img
+              width: 100%
+              height: auto
+            .article-text-wrapper
+              padding-right: 0px
+              padding-left: 10px
+              .article-text
+                width: 218px
+
+@media ( max-width: 650px)
+  .review
+    .swiper-container
+      width: 90%
+      height: 500px
+    .review-text
+    .review-text-tablet
 @media ( max-width: 576px)
   .header
     &-wrapper
-      margin-bottom: 39px
+      margin-bottom: 0px
+      padding-top: 18px
     &__logo
-      margin-left: 9px
+      margin-left: 24px
     .menu-button
-      margin-right: 0px
+      margin-right: 19px
     .main-section
       border-radius: 0px
       left: 0px
@@ -228,17 +530,15 @@
         .main-icon
           padding: 4px
   .collection
-    padding-top: 960px
+    padding-top: 1033px
     &-wrapper
       .collection-block-plant
         flex-basis: 100%
-        height: 300px
+        height: 450px
         border-radius: 4px
         overflow: hidden
         margin-bottom: 14px
         .collection-img
-          object-fit: cover
-          object-position: center -81px
       .collection-wrapper-img
         flex-direction: row
         min-width: 100%
@@ -249,10 +549,9 @@
         flex-basis: 48%
         border-radius: 4px
         overflow: hidden
-        height: 97px
-        max-height: 150px
+        height: 130px
       .collection-block-text
-        margin-top: 34px
+        margin-top: 25px
         .collection-title
           font-size: 28px
           line-height: 36px
@@ -263,4 +562,220 @@
           line-height: 28px
           text-align: center
         .collection-button
-          display: none
+          margin: 0 auto
+  .trends
+    &-wrapper
+      padding-left: 0px
+      padding-right: 0px
+      .trends-header
+        .trends-title
+          margin-bottom: 28px
+          font-size: 28px
+          line-height: 36px
+        .filters
+          padding-left: 11px
+          .catigories
+            font-size: 16px
+            line-height: 22px
+            margin-right: 16px
+      .news-wrapper,.best-wrapper,.soon-wrapper
+        padding-top: 35px
+        .see-more-wrapper
+          flex-basis: 47%
+          .trends-card-more
+            padding: 70px 49px 69px 49px
+            max-height: 250px
+            .see-more
+              margin-top: 16px
+              font-size: 17px
+              line-height: 20px
+        .trends-card
+          margin-bottom: 85px
+          flex-basis: 47%
+          height: 250px
+          .trends-img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center bottom
+          .card-title
+            margin-left: 0px
+            margin-top: 8px
+            font-size: 16px
+            line-height: 20px
+          .card-value
+            margin-top: 5px
+            justify-content: flex-start
+            .icon-cart
+              max-width: 14px
+              margin-left: 8px
+            .card-price
+              margin-left: 0px
+              font-size: 14px
+              line-height: 24px
+  .review
+    padding-bottom: 40px
+    .swiper-slide
+      overflow: scroll
+    .swiper-container
+      width: 90%
+      height: 500px
+    .review-text
+    .review-text-mobile
+      display: none
+  .history
+    padding-top: 36px
+    padding-bottom: 54px
+    .history-wrapper
+      .history-text
+        .history-tag
+          margin-bottom: 17px
+        .history-title
+          font-size: 28px
+          line-height: 36px
+          margin-bottom: 19px
+        .history-description
+          font-size: 16px
+          line-height: 28px
+          width: auto
+        .arrows
+          display: flex
+          justify-content: center
+          width: 100%
+          margin-left: 10px
+          margin-bottom: 16px
+          .arrows-prev,.arrows-next
+            border: 2px solid $color-text
+            padding: 16px 15px 12px 15px
+            .svg-width
+              width: 13px
+      .articles-container
+        width: 100%
+        height: auto
+        .articles
+          display: flex
+          flex-wrap: wrap
+          padding-left: 0px
+          justify-content: flex-start
+          .article--margin
+            margin-right: 0px
+          .article
+            flex-basis: 94%
+            margin-left: 4px
+            margin-bottom: 141px
+            min-height: 277px
+            &-img
+              width: 100%
+              height: 100%
+            .article-text-wrapper
+              padding-right: 0px
+              padding-left: 19px
+              bottom: -131px
+              .article-text
+                width: auto
+                font-size: 20px
+                line-height: 24px
+                width: 202px
+  .newsletter
+    padding-top: 61px
+    .newsletter-wrapper
+      .newsletter-text
+        .newsletter-title
+          font-size: 28px
+          line-height: 36px
+          margin-bottom: 28px
+        .newsletter-description
+          font-size: 16px
+          line-height: 28px
+          margin-bottom: 33px
+      .newsletter-form
+        margin-top: 0px
+        .newsletter-input
+          width: 99%
+          min-width: auto
+          padding: 15px 18px 15px 52px
+        .newsletter-img
+          transform: none
+          left: 24px
+          top: 25px
+        .newsletter-button
+          position: static
+          transform: none
+          width: 99%
+          margin-top: 10px
+
+@media ( max-width: 485px)
+  .review
+    .swiper-container
+      width: 90%
+      height: 540px
+@media ( max-width: 450px)
+  .collection
+    &-wrapper
+      .collection-block-plant
+        height: 380px
+      .collection-block
+        height: 120px
+  .trends
+    &-wrapper
+      .news-wrapper,.best-wrapper,.soon-wrapper
+        .see-more-wrapper
+          .trends-card-more
+            padding: 40px 29px 69px 29px
+            max-height: 200px
+            .see-more
+        .trends-card
+          height: 200px
+  .review
+    padding-top: 34px
+    .swiper-container
+      width: 280px
+      height: 560px
+    .review-text
+      font-size: 18px
+      line-height: 36px
+      margin-top: 21px
+    .review-author
+      text-align: center
+      width: 145px
+    .review-img
+      width: 70px
+@media ( max-width: 360px)
+  .collection
+    &-wrapper
+      .collection-block-plant
+        height: 300px
+        min-height: auto
+        .collection-img
+          height: 300px
+          object-position: center center
+      .collection-wrapper-img
+        .collection-block
+          flex-basis: 48%
+          max-height: 97px
+  .trends
+    &-wrapper
+      .news-wrapper,.best-wrapper,.soon-wrapper
+        .see-more-wrapper
+          flex-basis: 48%
+          .trends-card-more
+            padding: 34px 19px 69px 19px
+            max-height: 170px
+            .see-more
+        .trends-card
+          height: 170px
+          flex-basis: 48%
+  .review
+    padding-top: 34px
+    .swiper-container
+      width: 280px
+      height: 560px
+    .review-text
+      font-size: 18px
+      line-height: 36px
+      margin-top: 21px
+    .review-author
+      text-align: center
+      width: 145px
+    .review-img
+      width: 70px

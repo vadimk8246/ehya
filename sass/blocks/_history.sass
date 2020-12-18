@@ -1,0 +1,95 @@
+.history
+  padding-top: 114px
+  padding-bottom: 154px
+  .history-wrapper
+    padding: 0px 66px
+    display: flex
+    .history-text
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      flex-basis: 40%
+      .history-tag
+        font-family: Open Sans
+        font-weight: 600
+        font-size: 14px
+        line-height: 20px
+        color: #36B37E
+        padding: 6px 17px
+        border-radius: 20px
+        background-color: rgba(54, 179, 126, 0.1)
+        text-transform: uppercase
+        margin-bottom: 21px
+      .history-title
+        font-size: 48px
+        line-height: 60px
+        font-family: 'HK Grotesk'
+        color: $color-text
+        width: 330px
+        margin-top: 0px
+        margin-bottom: 10px
+      .history-description
+        font-size: 20px
+        line-height: 36px
+        font-family: Open Sans
+        color: $description-text
+        width: 380px
+        margin-bottom: 48px
+      .arrows
+        display: flex
+        .arrows-prev,.arrows-next
+          margin-right: 20px
+          cursor: pointer
+          padding: 18px 19px 16px 18px
+          border: 2px solid #959EAD
+          border-radius: 50%
+          &:hover .arrows-img
+            fill: $color-text
+            transition: 0.3s
+          &:hover
+            border: 2px solid $color-text
+            transition: 0.3s
+    .articles-container
+      width: 684px
+      height: 470px
+      .articles
+        display: flex
+        padding-left: 28px
+        .article
+          margin-top: 9px
+          position: relative
+          &--margin
+            margin-right: 27px
+          &-img
+            width: 312px
+            height: 317px
+            overflow: hidden
+            border-radius: 8px 8px 0px 0px
+            z-index: -1
+          .article-text-wrapper
+            background-color: #FAFDFF
+            padding: 20px 42px 20px 20px
+            margin-top: -5px
+            position: absolute
+            bottom: -155px
+            left: 10px
+          .article-text
+            margin-top: 0px
+            font-family: 'HK Grotesk'
+            font-weight: 500
+            font-size: 22px
+            line-height: 32px
+            width: 240px
+          .continue-link
+            margin-top: 10px
+            text-decoration: none
+            .continue
+              font-family: Open Sans
+              font-style: normal
+              font-weight: 600
+              font-size: 16px
+              line-height: 22px
+              color: $additional
+              &:hover
+                transition: 0.2s
+                color: lighten($additional, 20%)
