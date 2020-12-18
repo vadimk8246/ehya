@@ -14,6 +14,9 @@
   .collection
     &-wrapper
       padding: 0px 60px
+  .footer
+    ul
+      margin-right: 35px
 @media ( max-width: 1200px)
   .container
     max-width: 960px
@@ -60,6 +63,13 @@
   .newsletter
     .newsletter-wrapper
       padding: 0px 0px
+  .footer
+    &-wrapper
+      padding: 0px 0px
+      .footer-info
+        margin-right: 40px
+      ul
+
 @media ( max-width: 991px)
   .container
     max-width: 728px
@@ -267,6 +277,7 @@
                   color: $additional
   .newsletter
     padding-top: 65px
+    padding-bottom: 73px
     .newsletter-wrapper
       flex-wrap: wrap
       .newsletter-text
@@ -282,6 +293,35 @@
       .newsletter-form
         margin-top: 0px
         margin: 0 auto
+  .footer
+    padding-top: 64px
+    padding-bottom: 110px
+    &-wrapper
+      justify-content: center
+      padding: 0px 0px
+      .footer-info
+        margin-right: 48px
+        margin-left: -7px
+        .footer-logo
+          margin-left: 0px
+        .footer-description
+          margin-left: 0px
+        .footer-social
+          margin-left: 0px
+      .footer-nav
+        margin-right: 49px
+      .footer-services
+        margin-right: 18px
+      .footer-company
+        margin-left: 232px
+        margin-right: 46px
+      .footer-contacts
+        margin-right: 0px
+      ul
+        margin-bottom: 25px
+      .footer-item
+        &:hover
+          text-decoration: none
 @media ( max-width: 767px)
   .container
     width: 90%
@@ -441,7 +481,55 @@
               padding-left: 10px
               .article-text
                 width: 218px
+  .footer
+    padding-top: 47px
+    &-wrapper
+      justify-content: space-between
+      padding: 0px 0px
+      padding-left: 0px
+      .footer-info
+        flex-basis: 100%
+        margin-right: 0px
+        margin-left: 0px
+        order: 1
+        .footer-logo-link
+          margin: 0 auto
+          .footer-logo
+            margin-left: -4px
+            margin-bottom: 11px
+        .footer-description
+          margin-left: -15px
 
+          text-align: center
+          margin-bottom: 21px
+        .footer-social
+          margin-left: 0px
+          margin: 0 auto
+      .footer-nav
+        flex-basis: 50%
+        margin-right: 0px
+      .footer-services
+        flex-basis: 50%
+        margin-right: 0px
+      .footer-company
+        flex-basis: 50%
+        margin-left: 0px
+        margin-right: 0px
+      .footer-contacts
+        flex-basis: 50%
+        margin-right: 0px
+        margin-bottom: 47px
+      ul
+        margin-bottom: 16px
+        display: flex
+        flex-direction: column
+        align-items: center
+      .footer-item
+
+        margin-bottom: 15px
+      .footer-title
+
+        margin-bottom: 20px
 @media ( max-width: 650px)
   .review
     .swiper-container
@@ -662,6 +750,8 @@
           .article
             flex-basis: 94%
             margin-left: 4px
+            margin: 0 auto
+            margin-top: 9px
             margin-bottom: 141px
             min-height: 277px
             &-img
@@ -678,6 +768,7 @@
                 width: 202px
   .newsletter
     padding-top: 61px
+    padding-bottom: 64px
     .newsletter-wrapper
       .newsletter-text
         .newsletter-title
@@ -691,19 +782,77 @@
       .newsletter-form
         margin-top: 0px
         .newsletter-input
-          width: 99%
+          font-family: Open Sans
+          font-style: normal
+          font-weight: 600
+          font-size: 16px
+          line-height: 22px
           min-width: auto
-          padding: 15px 18px 15px 52px
+          min-height: 48px
+          padding: 0px 55px 0px 48px
+          width: 98%
         .newsletter-img
           transform: none
-          left: 24px
-          top: 25px
+          left: 21px
+          top: 21px
         .newsletter-button
           position: static
           transform: none
-          width: 99%
-          margin-top: 10px
-
+          width: 98%
+          margin-top: 8px
+  .footer
+    padding-top: 47px
+    padding-bottom: 70px
+    &-wrapper
+      justify-content: flex-start
+      padding: 0px 0px
+      padding-left: 18px
+      .footer-info
+        flex-basis: 100%
+        margin-right: 0px
+        margin-left: 0px
+        order: 1
+        .footer-logo-link
+          margin: 0 auto
+          .footer-logo
+            margin-left: -4px
+            margin-bottom: 11px
+        .footer-description
+          margin-left: -15px
+          font-size: 14px
+          line-height: 24px
+          text-align: center
+          margin-bottom: 21px
+        .footer-social
+          margin-left: 0px
+          margin: 0 auto
+      .footer-nav
+        flex-basis: 100%
+        margin-right: 0px
+      .footer-services
+        flex-basis: 100%
+        margin-right: 0px
+      .footer-company
+        flex-basis: 100%
+        margin-left: 0px
+        margin-right: 0px
+      .footer-contacts
+        flex-basis: 100%
+        margin-right: 0px
+        margin-bottom: 47px
+      ul
+        margin-bottom: 16px
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+      .footer-item
+        font-size: 14px
+        line-height: 20px
+        margin-bottom: 15px
+      .footer-title
+        font-size: 16px
+        line-height: 22px
+        margin-bottom: 20px
 @media ( max-width: 485px)
   .review
     .swiper-container

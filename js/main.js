@@ -13,7 +13,7 @@ $(document).ready(function () {
 
   var mySwiper = new Swiper('.swiper-container', {
   autoplay: {
-    delay: 7000,
+    delay: 124435000,
     disableOnInteraction: false,
   },
   
@@ -38,10 +38,6 @@ $(document).ready(function () {
   },
 })
   var mySwiper = new Swiper('.articles-container', {
-  autoplay: {
-    delay: 7000,
-    disableOnInteraction: false,
-  },
     // Optional parameters
   loop: true,
 
