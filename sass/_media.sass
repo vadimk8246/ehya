@@ -322,6 +322,23 @@
       .footer-item
         &:hover
           text-decoration: none
+  .menu-mobile
+    position: fixed
+    top: 15px
+    right: 8px
+    left: 8px
+    background-color: #fff
+    &-wrapper
+      .menu-list
+        text-align: center
+        margin: 0 auto
+        padding-left: 0px
+        .menu-mobile-item
+          padding: 13px 0px
+      .mobile-menu-button
+        width: 60%
+        margin: 0 auto
+        margin-top: 10px
 @media ( max-width: 767px)
   .container
     width: 90%
@@ -853,6 +870,29 @@
         font-size: 16px
         line-height: 22px
         margin-bottom: 20px
+  .menu-mobile
+    padding-bottom: 0px
+    &-wrapper
+      .mobile-menu-icon
+        top: 7px
+      .mobile-menu-button
+        padding-top: 7px
+        padding-bottom: 9px
+        width: 85%
+        height: 40px
+        margin: 0 auto
+        color: $additional
+        border: 2px solid $additional
+        margin-bottom: 35px
+        background-color: transparent
+        border-radius: 8px
+        margin-top: 10px
+      .menu-list
+        padding-left: 20px
+        padding-top: 21px
+        margin-left: 0px
+        .menu-mobile-item
+          padding: 10px 0px
 @media ( max-width: 485px)
   .review
     .swiper-container

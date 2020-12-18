@@ -62,4 +62,17 @@ $(document).ready(function () {
   $.validator.methods.email = function( value, element ) {
   return this.optional( element ) || /[a-z,1-9]+@[a-z]+\.[a-z]+/.test( value );
 }
+
+  
+  
+  var menuButton = document.querySelector(".menu-button");
+  menuButton.addEventListener('click', function (){
+    document.querySelector(".menu-mobile")
+    .classList.add('menu-mobile-active');
+  });
+  var closeButton = document.querySelector(".mobile-menu-icon");
+  closeButton.addEventListener('click', function (){
+    document.querySelector(".menu-mobile")
+    .classList.remove('menu-mobile-active');
+  });
 });
