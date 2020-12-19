@@ -49,7 +49,7 @@ $(document).ready(function () {
 })
 
 
-  // Обработка форм
+  // Обработка формы подписки
   $(".newsletter-form").validate({
     errorClass: "invalid",
     messages: {
@@ -59,10 +59,23 @@ $(document).ready(function () {
       }
     },
   });
+    // Проверка почты на наличие домена
   $.validator.methods.email = function( value, element ) {
   return this.optional( element ) || /[a-z,1-9]+@[a-z]+\.[a-z]+/.test( value );
 }
-
+    // Обработка формы обратной связи
+  $(".modal-form").validate({
+    errorClass: "invalid",
+    messages: {
+      name:{
+        required: "Это поле обязательно"
+      },
+      phone:{
+        required:"Это поле обязательно",
+        minlength:"Мин. символов: 11"
+      }
+    }
+  })
   
   
   var menuButton = document.querySelector(".menu-button");
@@ -75,4 +88,43 @@ $(document).ready(function () {
     document.querySelector(".menu-mobile")
     .classList.remove('menu-mobile-active');
   });
+
+  var modalButton = $('[data-toggle=modal]');
+  var closeModalButton = $('.modal-icon');
+  var closeClickOverlay = $('.modal-overlay');
+  var closeMenuTab = $('.menu-mobile-item');
+  modalButton.on('click', openModal );
+  closeModalButton.on('click', closeModal );
+  closeClickOverlay.on('click',closeModal );
+  closeMenuTab.on('click',closeMenu) ;
+
+  //Открытие модального окна функция
+  function openModal() {
+    var modalOverlay = $(".modal-overlay");
+    var modalDialog = $(".modal-dialog");
+    modalOverlay.addClass('modal-overlay-active');
+    modalDialog.addClass('modal-dialog-active');
+  }
+  //Закрытие модального окна функция
+  function closeModal() {
+    var modalOverlay = $(".modal-overlay");
+    var modalDialog = $(".modal-dialog");
+    modalOverlay.removeClass('modal-overlay-active');
+    modalDialog.removeClass('modal-dialog-active');
+  }
+  //Закрытие мобильного меню функция
+  function closeMenu() {
+    var menuMobile = $('.menu-mobile');
+    menuMobile.removeClass('menu-mobile-active');
+  };
+  
+  //Закрытие модального окна нажатием Escape
+  function closeEscape(e){
+    if (e.key == 'Escape'){
+        closeModal()
+    }
+  }
+  document.onkeydown = closeEscape
+  // Маска для инпута с телефоном в модальном окне
+  $('.input-modal-phone').mask('+7 (000) 000-00-00')
 });

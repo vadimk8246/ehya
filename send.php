@@ -7,13 +7,18 @@ require 'phpmailer/Exception.php';
 
 // Переменные, которые отправляет пользователь
 $email = $_POST['email'];
-
+$name = $_POST['name'];
+$phone = $_POST['phone'];
+$message = $_POST['message'];
+$chet = strlen($email);
 // Формирование самого письма
 $title = "Вы подписались на рассылку";
 $body = "
-<h2>Вы подписались на рассылку новостей</h2>
-<b>Ваша почта:</b> $email<br>"
-;
+<h2>Новое обращение</h2>
+<b>Имя:</b> $name<br>
+<b>Телефон:</b> $phone<br><br>
+<b>Сообщение:</b><br>$message
+";
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -35,6 +40,14 @@ try {
     // Получатель письма
     $mail->addAddress('8246vadim8246@mail.ru');  
 
+
+if ($chet > 0) {
+    $body = "<h2>Вы подписались на новости</h2>
+                 <b>email:</b> $email<br>";
+    //$func = header('Location: subscribe.html');
+    $title = "Новый клиент";
+    
+}
  
 // Отправка сообщения
 $mail->isHTML(true);
@@ -51,4 +64,4 @@ else {$result = "error";}
 }
 
 // Отображение результата
-echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+header('Location: subscribe.html');
