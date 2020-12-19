@@ -37,18 +37,17 @@
         margin-bottom: 48px
       .arrows
         display: flex
+        .arrows-img
+          fill: $color-text
         .arrows-prev,.arrows-next
           margin-right: 20px
           cursor: pointer
           padding: 18px 19px 16px 18px
-          border: 2px solid #959EAD
+          border: 2px solid $color-text
+          transition: 0.3s
           border-radius: 50%
-          &:hover .arrows-img
-            fill: $color-text
-            transition: 0.3s
-          &:hover
-            border: 2px solid $color-text
-            transition: 0.3s
+        .arrows-disabled
+          opacity: 0.5
     .articles-container
       width: 684px
       height: 470px

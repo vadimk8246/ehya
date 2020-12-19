@@ -11,7 +11,7 @@ $(document).ready(function () {
   });
 
 
-  var mySwiper = new Swiper('.swiper-container', {
+  var mySwiper = new Swiper('.review-slider', {
   autoplay: {
     delay: 124435000,
     disableOnInteraction: false,
@@ -39,15 +39,15 @@ $(document).ready(function () {
 })
   var mySwiper = new Swiper('.articles-container', {
     // Optional parameters
-  loop: true,
-
+  loop: false,
+  watchOverflow: true,
   // Navigation arrows
   navigation: {
     nextEl: '.arrows-next',
     prevEl: '.arrows-prev',
+    disabledClass: "arrows-disabled",
   },
 })
-
 
   // Обработка формы подписки
   $(".newsletter-form").validate({
