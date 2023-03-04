@@ -93,10 +93,12 @@ $(document).ready(function () {
   var closeModalButton = $('.modal-icon');
   var closeClickOverlay = $('.modal-overlay');
   var closeMenuTab = $('.menu-mobile-item');
+  var buttonInMobile = $('.mobile-menu-button')
   modalButton.on('click', openModal );
   closeModalButton.on('click', closeModal );
   closeClickOverlay.on('click',closeModal );
   closeMenuTab.on('click',closeMenu) ;
+  buttonInMobile.on('click',closeMenu) ;
 
   //Открытие модального окна функция
   function openModal() {
